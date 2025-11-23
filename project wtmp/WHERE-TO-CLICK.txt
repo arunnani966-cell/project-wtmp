@@ -1,0 +1,78 @@
+═══════════════════════════════════════════════════════════
+  WHERE TO CLICK - VISUAL GUIDE
+═══════════════════════════════════════════════════════════
+
+In your project folder, you should see these files:
+
+📁 Your Project Folder:
+   C:\Users\arunn\OneDrive\Tài liệu\project wtmp
+
+📄 Files you can double-click:
+
+1. 🚀 START HERE.bat
+   → This is the EASIEST way!
+   → Double-click this file
+   → Choose option 1 to test, or option 2 to start
+
+2. test-setup.bat
+   → Double-click to check if everything is set up correctly
+   → Shows if Node.js is installed, files exist, etc.
+
+3. start-node.bat
+   → Double-click to start the server
+   → This runs your app
+
+═══════════════════════════════════════════════════════════
+  STEP-BY-STEP INSTRUCTIONS
+═══════════════════════════════════════════════════════════
+
+METHOD 1: Easiest (Recommended)
+────────────────────────────────
+1. Open File Explorer
+2. Go to: C:\Users\arunn\OneDrive\Tài liệu\project wtmp
+3. Look for: 🚀 START HERE.bat
+4. Double-click it
+5. Choose option 1 (Test) or option 2 (Start)
+
+METHOD 2: Direct Start
+───────────────────────
+1. Open File Explorer
+2. Go to: C:\Users\arunn\OneDrive\Tài liệu\project wtmp
+3. Look for: start-node.bat
+4. Double-click it
+5. Wait for "✅ SERVER IS RUNNING!"
+6. Open browser to: http://localhost:8000
+
+METHOD 3: Test First
+─────────────────────
+1. Open File Explorer
+2. Go to: C:\Users\arunn\OneDrive\Tài liệu\project wtmp
+3. Look for: test-setup.bat
+4. Double-click it
+5. See if everything is OK
+6. Then use start-node.bat
+
+═══════════════════════════════════════════════════════════
+  CAN'T FIND THE FILES?
+═══════════════════════════════════════════════════════════
+
+If you can't see the .bat files:
+
+1. Make sure you're in the right folder:
+   C:\Users\arunn\OneDrive\Tài liệu\project wtmp
+
+2. In File Explorer, make sure "File name extensions" is visible:
+   - Click "View" tab
+   - Check "File name extensions"
+
+3. Look for files ending in .bat:
+   - 🚀 START HERE.bat
+   - test-setup.bat
+   - start-node.bat
+
+4. If still can't find, open Command Prompt and type:
+   cd "C:\Users\arunn\OneDrive\Tài liệu\project wtmp"
+   dir *.bat
+
+═══════════════════════════════════════════════════════════
+

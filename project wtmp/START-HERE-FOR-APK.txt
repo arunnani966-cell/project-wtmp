@@ -1,0 +1,47 @@
+═══════════════════════════════════════════════════════════
+  WHERE TO CLICK - Get Your Netlify URL
+═══════════════════════════════════════════════════════════
+
+In your project folder, look for this file:
+
+📄 QUICK-DEPLOY.bat
+   → Double-click this file
+   → It will open Netlify website
+   → Follow the instructions
+
+═══════════════════════════════════════════════════════════
+  STEP-BY-STEP
+═══════════════════════════════════════════════════════════
+
+1. Open File Explorer
+2. Go to: C:\Users\arunn\OneDrive\Tài liệu\project wtmp
+3. Find: QUICK-DEPLOY.bat
+4. Double-click it
+5. Follow the instructions that appear
+
+═══════════════════════════════════════════════════════════
+  WHAT HAPPENS NEXT
+═══════════════════════════════════════════════════════════
+
+After double-clicking QUICK-DEPLOY.bat:
+
+1. Netlify website will open in your browser
+2. Sign up or log in (free)
+3. Drag your project folder to Netlify
+4. Get your URL (like: https://xxx.netlify.app)
+5. Use that URL to build APK at pwabuilder.com
+
+═══════════════════════════════════════════════════════════
+  ALTERNATIVE: Manual Method
+═══════════════════════════════════════════════════════════
+
+If you can't find QUICK-DEPLOY.bat:
+
+1. Open browser
+2. Go to: https://www.netlify.com/
+3. Sign up (free)
+4. Drag your project folder to Netlify
+5. Get your URL
+
+═══════════════════════════════════════════════════════════
+

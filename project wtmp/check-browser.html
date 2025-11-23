@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser Check - Recipe Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .check-item {
+            background: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border-left: 4px solid #4CAF50;
+        }
+        .error {
+            border-left-color: #f44336;
+            background: #ffebee;
+        }
+        .warning {
+            border-left-color: #ff9800;
+            background: #fff3e0;
+        }
+        h1 {
+            color: #333;
+        }
+        code {
+            background: #f5f5f5;
+            padding: 2px 6px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔍 Browser Check - Recipe Generator</h1>
+    <p>This page helps diagnose why the app interface might not be showing.</p>
+    
+    <div id="checks"></div>
+    
+    <script>
+        const checks = [];
+        
+        // Check 1: CSS file
+        fetch('styles.css')
+            .then(res => {
+                if (res.ok) {
+                    checks.push({ name: 'CSS File (styles.css)', status: 'ok', message: 'Loaded successfully' });
+                } else {
+                    checks.push({ name: 'CSS File (styles.css)', status: 'error', message: `Failed: ${res.status} ${res.statusText}` });
+                }
+                updateDisplay();
+            })
+            .catch(err => {
+                checks.push({ name: 'CSS File (styles.css)', status: 'error', message: `Error: ${err.message}` });
+                updateDisplay();
+            });
+        
+        // Check 2: JavaScript file
+        fetch('app.js')
+            .then(res => {
+                if (res.ok) {
+                    checks.push({ name: 'JavaScript File (app.js)', status: 'ok', message: 'Loaded successfully' });
+                } else {
+                    checks.push({ name: 'JavaScript File (app.js)', status: 'error', message: `Failed: ${res.status} ${res.statusText}` });
+                }
+                updateDisplay();
+            })
+            .catch(err => {
+                checks.push({ name: 'JavaScript File (app.js)', status: 'error', message: `Error: ${err.message}` });
+                updateDisplay();
+            });
+        
+        // Check 3: Console errors
+        window.addEventListener('error', (e) => {
+            checks.push({ name: 'JavaScript Error', status: 'error', message: `${e.message} at ${e.filename}:${e.lineno}` });
+            updateDisplay();
+        });
+        
+        // Check 4: Service Worker
+        if ('serviceWorker' in navigator) {
+            checks.push({ name: 'Service Worker Support', status: 'ok', message: 'Browser supports service workers' });
+        } else {
+            checks.push({ name: 'Service Worker Support', status: 'warning', message: 'Browser does not support service workers (app will still work)' });
+        }
+        updateDisplay();
+        
+        function updateDisplay() {
+            const container = document.getElementById('checks');
+            container.innerHTML = checks.map(check => {
+                const className = check.status === 'ok' ? 'check-item' : 
+                                 check.status === 'error' ? 'check-item error' : 
+                                 'check-item warning';
+                const icon = check.status === 'ok' ? '✅' : 
+                            check.status === 'error' ? '❌' : 
+                            '⚠️';
+                return `<div class="${className}">
+                    <strong>${icon} ${check.name}</strong><br>
+                    ${check.message}
+                </div>`;
+            }).join('');
+        }
+        
+        // Initial display
+        setTimeout(updateDisplay, 100);
+    </script>
+    
+    <div style="margin-top: 30px; padding: 20px; background: white; border-radius: 5px;">
+        <h2>Next Steps:</h2>
+        <ol>
+            <li>Check the results above</li>
+            <li>Open browser console (F12) and check for errors</li>
+            <li>Try opening <a href="index.html">index.html</a> directly</li>
+            <li>Check the server terminal for any error messages</li>
+        </ol>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,65 @@
+═══════════════════════════════════════════════════════════
+  QUICK START GUIDE - AI Recipe Generator
+═══════════════════════════════════════════════════════════
+
+STEP 1: Install Node.js (if not already installed)
+   Download from: https://nodejs.org/
+   Install it (default settings are fine)
+
+STEP 2: Double-click "start-node.bat"
+   (This starts the JavaScript/Node.js server)
+
+STEP 3: Wait for the message "✅ SERVER IS RUNNING!"
+
+STEP 4: Your browser should open automatically
+   If not, manually open: http://localhost:8000
+
+STEP 5: Use the app!
+   - Enter ingredients (e.g., "chicken, tomatoes")
+   - Click "Search Recipes"
+   - Save favorites!
+
+STEP 6: When done, press Ctrl+C in the terminal window
+   Or just close the terminal window
+
+═══════════════════════════════════════════════════════════
+  TROUBLESHOOTING
+═══════════════════════════════════════════════════════════
+
+❌ "Site can't be reached" error?
+
+   → Make sure the terminal shows "✅ SERVER IS RUNNING!"
+   → Wait a few seconds after starting the server
+   → Try refreshing the browser (F5)
+   → Make sure you're using: http://localhost:8000
+   → Check if Windows Firewall is blocking
+
+❌ "Node.js not found" error?
+
+   → Install Node.js from https://nodejs.org/
+   → Restart your computer after installation
+   → Try start-node.bat again
+
+❌ "Port already in use" error?
+
+   → Close other applications
+   → Restart your computer
+   → Or edit server.js and change PORT = 8000 to PORT = 8001
+
+❌ Browser doesn't open automatically?
+
+   → Manually open your browser
+   → Type: http://localhost:8000 in the address bar
+
+═══════════════════════════════════════════════════════════
+  ALTERNATIVE: VS Code Live Server
+═══════════════════════════════════════════════════════════
+
+If you don't want to use Node.js:
+
+1. Install VS Code
+2. Install "Live Server" extension
+3. Right-click index.html
+4. Select "Open with Live Server"
+
+═══════════════════════════════════════════════════════════

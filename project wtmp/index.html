@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI Recipe Generator - Find recipes based on your ingredients">
+    <meta name="theme-color" content="#4CAF50">
+    <title>AI Recipe Generator</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>🍳 AI Recipe Generator</h1>
+        <p class="subtitle">Enter ingredients you have, discover amazing recipes!</p>
+    </header>
+
+    <main>
+        <section class="search-section">
+            <div class="input-container">
+                <input 
+                    type="text" 
+                    id="ingredientInput" 
+                    placeholder="Enter ingredients (e.g., chicken, tomatoes, pasta)"
+                    autocomplete="off"
+                >
+                <button id="searchBtn" class="search-btn">Search Recipes</button>
+            </div>
+            <div class="loading" id="loading" style="display: none;">
+                <div class="spinner"></div>
+                <p>Finding delicious recipes...</p>
+            </div>
+        </section>
+
+        <section class="tabs">
+            <button class="tab-btn active" data-tab="recipes">Recipes</button>
+            <button class="tab-btn" data-tab="favorites">Favorites</button>
+        </section>
+
+        <section class="recipes-section" id="recipesSection">
+            <div id="recipesContainer" class="recipes-grid">
+                <div class="welcome-message">
+                    <h2>👨‍🍳 Welcome!</h2>
+                    <p>Enter ingredients above to discover amazing recipes</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="favorites-section" id="favoritesSection" style="display: none;">
+            <div id="favoritesContainer" class="recipes-grid">
+                <div class="empty-state" id="emptyFavorites">
+                    <p>No favorite recipes yet. Start searching and save your favorites!</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="recipeModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+

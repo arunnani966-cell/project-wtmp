@@ -1,0 +1,15 @@
+{
+  "appId": "com.recipegenerator.app",
+  "appName": "Recipe Generator",
+  "webDir": ".",
+  "server": {
+    "androidScheme": "https"
+  },
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 2000,
+      "backgroundColor": "#4CAF50"
+    }
+  }
+}
+
